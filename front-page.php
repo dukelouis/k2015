@@ -47,14 +47,68 @@ $posts = get_posts(array(
 
 foreach ( $posts as $post ) : setup_postdata( $post ); 
 ?>
-<article>
-  <h1><?php the_title(); ?></h1>
-  <?php the_content(); ?>
-</article>
+  <article id="<?php echo $post->post_name; ?>">
+    <h1><?php the_title(); ?></h1>
+    <?php the_content(); ?>
+  </article>
 <?php 
 endforeach; 
 wp_reset_postdata();
 ?>
 </div>
-
+<div id="patrocinios"></div>
+<div id="programacao"></div>
+<?php
+$posts = get_posts(array(
+  'post_type' => 'convidado'
+));
+if(count($posts)):
+?>
+<div id="convidados" class="clearfix">
+  <h1>Convidados</h1>
+<?php
+foreach ( $posts as $post ) : setup_postdata( $post ); 
+$meta = get_post_meta(get_the_ID());
+?>
+  <div class="convidado col-xs-12 col-sm-6">
+    <img src="<?php echo $meta['wpcf-url-imagem'][0]; ?>">
+    <h1><?php the_title(); ?></h1>
+    <p>
+<?php echo $meta['wpcf-resumo'][0]; ?> 
+    </p>
+  </div>
+<?php 
+endforeach; 
+wp_reset_postdata();
+?>
+</div>
+<?php
+endif;
+?>
+<div id="ingressos">
+  <h1>Ingressos</h1>
+  <p>
+    Curtiu a programação? Gostou ainda mais das atrações que estarão na edição deste ano? <br>
+    Então compre seu ingresso agora!
+  </p>
+  <a href="" target="_blank" class="comprar">
+    <span>
+      <i class="fa fa-ticket"></i>
+      <em>R$34,00</em>
+      Meia R$17,00
+    </span>
+    <span>Comprar</span>
+  </a>
+</div>
+<div id="contato">
+  <h1>Contato</h1>
+  <div class="info">
+    <h2>Telefone</h2>
+    <address class="phone">(69) 9258.5495</address>
+  </div>
+  <div class="info">
+    <h2>Email</h2>
+    <address class="email">pro.kaminari@gmail.com</address>
+  </div>
+</div>
 <?php get_footer(); ?>

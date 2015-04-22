@@ -49,7 +49,7 @@ body {
       width: 100%;
       font-size: 0px;
 
-      >.wrapper {
+      > .wrapper {
         width: 270px;
         margin: 0 auto;
         padding-top: 45vw;
@@ -203,7 +203,7 @@ body {
         color: #FFF;
         padding: 3px 10px;
         line-height: rem(20);
-        
+
         time {
           display: block;
           font-size: rem(18);
@@ -254,6 +254,258 @@ body {
         margin-left: -20px;
         background-color: #44A025;
       }
+    }
+  }
+}
+
+#convidados {
+  padding: 20px;
+  background: url(../images/bg-stripped.png);
+
+  > h1 {
+    font-family: 'Kaushan Script';
+    color: #565960;
+    text-align: center;
+    font-size: rem(24);
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      left: 50%;
+      margin-left: -20px;
+      background-color: #D71923;
+    }
+  }
+
+  .convidado {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 20px solid #D71923;
+      @include size(210px);
+    }
+
+    h1 {
+      font-family: 'Kaushan Script';
+      color: #D71923;
+      font-size: rem(20);
+      position: relative;
+      padding-bottom: 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        height: 1px;
+        left: 50%;
+        margin-left: -25px;
+        background-color: #D71923;
+      }
+    }
+
+    p {
+      font-size: rem(18);
+      color: #565960;
+    }
+  }
+}
+
+#ingressos {
+  text-align: center;
+  padding: 10px;
+  background: #1FBE9E url(../images/bg-dotted2.png);
+  color: #FFF;
+  font-size: rem(18);
+
+  h1 {
+    font-family: 'Kaushan Script';
+    color: #FFF;
+    font-size: rem(24);
+    position: relative;
+    padding-bottom: 20px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      left: 50%;
+      margin-left: -20px;
+      background-color: #158875;
+    }
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  a {
+    display: block;
+    width: 290px;
+    height: 100px;
+    margin: 10px auto;
+    border: 1px dashed #FFF;
+    border-radius: 10px;
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      @include size(30px);
+      background: #1FBE9E url(../images/bg-dotted2.png);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      z-index: 10;
+    }
+
+    &:before {
+      border-right: 1px dashed #FFF;
+      left: -15px;
+    }
+
+    &:after {
+      border-left: 1px dashed #FFF;
+      right: -15px;
+    }
+
+    span {
+      display: block;
+      float: left;
+
+      &:first-child {
+        color: #565960;
+        height: 100%;
+        background-color: #fff;
+        width: 40%;
+        text-align: center;
+        border-radius: 10px 0 0 10px;
+        font-size: rem(14);
+
+        i {
+          display: block;
+          font-size: rem(40);
+          padding: 10px 0 5px 0;
+          color: #1FBE9E;
+        }
+
+        em {
+          display: block;
+          font-size: rem(22);
+          font-weight: 700;
+          font-style: normal;
+          line-height: rem(21);
+        }
+      }
+
+      &:last-child {
+        display: block;
+        text-transform: uppercase;
+        color: #FFF;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border: 2px solid #FFF;
+        border-radius: 3px;
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        margin: 33px 0 0 30px;
+      }
+    }
+  }
+}
+
+#contato {
+  background: url(../images/bg-dotted.png);
+  padding: 10px;
+  color: #565960;
+
+  > h1 {
+    font-family: 'Kaushan Script';
+    color: #565960;
+    text-align: center;
+    font-size: rem(24);
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      left: 50%;
+      margin-left: -20px;
+      background-color: #F3CA2C;
+    }
+  }
+
+  .info {
+    font-size: rem(16);
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    h2 {
+      margin: 0 0 5px 0;
+      font-size: rem(18);
+      font-weight: 700;
+    }
+
+    address {
+      font-size: rem(18);
+      margin: 0;
+    }
+
+    address:before {
+      color: #51C137;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+      margin-right: 10px;
+    }
+
+    address.phone:before {
+      content: "\f232";
+    }
+
+    address.email:before {
+      content: "\f0e0";
+    }
+
+    &:after {
+      content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 30px;
+        height: 1px;
+        left: 0;
+        background-color: #51C137;
     }
   }
 }
