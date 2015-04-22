@@ -1,0 +1,26 @@
+{
+  "name": "fimca-vilhena",
+  "version": "1.0.0",
+  "authors": [
+    "Netpix Agência WEB <agencia@netpix.com.br>"
+  ],
+  "description": "none",
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "homepage": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "bootstrap-sass-official": "~3.3.4",
+    "fontawesome": "~4.3.0"
+  },
+  "private": true
+}
