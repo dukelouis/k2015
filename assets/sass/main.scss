@@ -1,7 +1,12 @@
 @import "vars";
 
-@import "bourbon";
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @import "bootstrap";
+@import "bourbon";
 @import "font-awesome";
 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Kaushan+Script);
@@ -12,4 +17,159 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+#the_header {
+  .logo {
+    h1 {
+      margin: 0;
+      display: inline-block;
+      @include size(165px 50px);
+
+      a {
+        display: block;
+        height: 100%;
+        background: url(../images/logo-kaminari.png) no-repeat center center;
+        background-size: contain;
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  .banner {
+    background: url(../images/destaque-kaminari2.png) no-repeat center top;
+    background-size: 100% auto;
+    position: relative;
+    height: 300px;
+
+    .dados {
+      position: absolute;
+      width: 270px;
+      margin-left: -135px;
+      left: 50%;
+      top: 45vw;
+      white-space: nowrap;
+      font-size: 0px;
+
+      header, time {
+        width: 90px;
+        height: 90px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        font-size: rem(14);
+        float: left;
+      }
+
+      header {
+        background-color: #FFF;
+        padding: 10px;
+
+        h1 {
+          margin: 0 0 10px 0;
+          text-transform: uppercase;
+          font-size: rem(16);
+          position: relative;
+
+          em {
+            font-style: normal;
+            display: block;
+            font-weight: 700;
+          }
+
+          &:after {
+            content: "";
+            width: 60%;
+            height: 1px;
+            background-color: #DBDBDB;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+          }
+        }
+
+        h2 {
+          display: inline-block;
+          background-color: #565960;
+          margin: 0;
+          padding: 0px 10px;
+          height: 25px;
+          position: absolute;
+          bottom: 0;
+          right: 25px;
+          color: #FFF;
+          font-size: rem(12);
+          line-height: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          &:after {
+            content: "\f178";
+            display: block;
+            @include size(25px);
+            background-color: #FFEA00;
+            position: absolute;
+            top: 0;
+            right: -25px;
+            color: #565960;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-align: center;
+            line-height: 27px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translate(0, 0);
+          }
+        }
+      }
+
+      time {
+        background-color: #FFEA00;
+        color: #3E424B;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: rem(18);
+        line-height: rem(18);
+
+        em {
+          display: block;
+          font-size: rem(28);
+          font-style: normal;
+          letter-spacing: rem(0);
+          line-height: rem(24);
+        }
+
+        &:nth-of-type(2) {
+          background-color: #EEDA09;
+        }
+
+        &:after {
+          content: "\f073";
+          display: block;
+          @include size(30px);
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -15px;
+          color: #565960;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-align: center;
+          line-height: 30px;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          transform: translate(0, 0);
+          border-bottom: 1px solid #D1C70B;
+        }
+      }
+    }
+  }
 }

@@ -12,7 +12,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> <?php/* Meta para modo de compatibilidade do IE. Precisa ser a primeira meta para que funcione corretamente */?> 
     <meta charset="UTF-8"> <?php/* Meta para codificação de caracteres */?> 
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1"> <?php/* Meta para dispositivos móveis */?>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <?php/* Meta para dispositivos móveis */?>
 
     <title><?php 
       if (function_exists('is_tag') && is_tag()):
