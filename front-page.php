@@ -39,5 +39,22 @@
     </div>
   </div>
 </header>
+<div id="sessoes">
+<?php
+$posts = get_posts(array(
+  'post_type' => 'sessao'
+));
+
+foreach ( $posts as $post ) : setup_postdata( $post ); 
+?>
+<article>
+  <h1><?php the_title(); ?></h1>
+  <?php the_content(); ?>
+</article>
+<?php 
+endforeach; 
+wp_reset_postdata();
+?>
+</div>
 
 <?php get_footer(); ?>
