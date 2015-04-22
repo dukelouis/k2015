@@ -15,7 +15,7 @@
   </div>
   <div class="banner">
     <div class="dados">
-        <div class="wrapper visible-xs-block clearfix">
+        <div class="wrapper visible-xs-block visible-sm-block clearfix">
           <header>
             <h1>Kaminari <em>2015</em></h1>
             <h2>Datas</h2>
@@ -29,7 +29,7 @@
             Jul
           </time>
         </div>
-        <footer class="visible-xs-block">
+        <footer class="visible-xs-block visible-sm-block">
           <div class="wrapper">
             <time>Das <em>11h</em> às <em>19h</em></time>
             <h2 class="hidden-md">Horário</h2>

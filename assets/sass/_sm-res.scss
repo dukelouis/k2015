@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+  #the_header {
+    .logo {
+      h1 {
+        @include size(29vw 8vw);
+      }
+    }
+
+    .banner {
+      .dados {
+        > .wrapper {
+          width: 450px;
+          padding-top: 50vw;
+          
+          header, time {
+            width: 150px;
+            height: 150px;
+          }
+
+          header {
+            padding: 20px;
+
+            h1 {
+              margin: 0 0 10px 0;
+              font-size: rem(24);
+            }
+
+            h2 {
+              font-size: rem(14);
+              line-height: 30px;
+              right: 30px;
+              height: 30px;
+
+              &:after {
+                @include size(30px);
+                right: -30px;
+                line-height: 32px;
+              }
+            }
+          }
+
+          time {
+            padding: 20px;
+            font-size: rem(30);
+            line-height: rem(30);
+
+            em {
+              font-size: rem();
+            }
+          }
+        }
+      }
+    }
+  }
+}

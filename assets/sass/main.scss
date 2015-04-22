@@ -24,7 +24,7 @@ body {
     h1 {
       margin: 0;
       display: inline-block;
-      @include size(165px 50px);
+      @include size(40vw 12.5vw);
 
       a {
         display: block;
@@ -509,3 +509,5 @@ body {
     }
   }
 }
+
+@import "_sm-res";
