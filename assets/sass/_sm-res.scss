@@ -41,15 +41,63 @@
 
           time {
             padding: 20px;
-            font-size: rem(30);
-            line-height: rem(30);
+            font-size: rem(32);
+            line-height: rem(44);
 
             em {
-              font-size: rem();
+              font-size: rem(44);
+            }
+
+            &:after {
+              font-size: rem(21);
+              @include size(50px);
+              margin-left: -25px;
+              line-height: 50px;
             }
           }
         }
       }
+      footer {
+        height: 60px;
+        font-size: rem(21);
+        line-height: rem(21);
+        margin: 20px 0;
+
+        &:before {
+          @include size(60px);
+          font-size: rem(28);
+          line-height: rem(60);
+        }
+
+        .wrapper {
+          line-height: rem(28);
+          padding: 7px 10px;
+
+          time {
+            font-size: rem(24);
+          }
+
+          h2 {
+            font-size: rem(16);
+          }
+        }
+      }
     }
+  }
+}
+
+#sessoes {
+  > article {
+    > h1 {
+      font-size: rem(32);
+      margin-bottom: 30px;
+    }
+  }
+}
+
+#convidados {
+  > h1 {
+    font-size: rem(32);
+    margin-bottom: 30px;
   }
 }

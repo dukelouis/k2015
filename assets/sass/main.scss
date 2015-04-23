@@ -129,7 +129,7 @@ body {
 
         time {
           background-color: #FFEA00;
-          color: #3E424B;
+          color: #565960;
           padding: 10px;
           text-align: center;
           text-transform: uppercase;
@@ -189,7 +189,7 @@ body {
         font: normal normal normal 14px/1 FontAwesome;
         font-size: rem(20);
         text-align: center;
-        line-height: 40px;
+        line-height: rem(40);
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -327,7 +327,7 @@ body {
 
 #ingressos {
   text-align: center;
-  padding: 10px;
+  padding: 0 0 10px 0;
   background: #1FBE9E url(../images/bg-dotted2.png);
   color: #FFF;
   font-size: rem(18);
