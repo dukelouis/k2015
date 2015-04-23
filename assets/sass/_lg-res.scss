@@ -1,0 +1,22 @@
+@media (min-width: 1200px) {
+  #sessoes {
+    > article {
+      .content {
+        flex: 0 0 560px;
+      }
+    }
+  }
+
+  #convidados {
+    .content {
+      width: 560px;
+
+      .convidado {
+        img {
+          @include size(210px);
+          border-width: 20px;
+        }
+      }
+    }
+  }
+}

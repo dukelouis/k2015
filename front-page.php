@@ -5,6 +5,8 @@
     <div class="row">
       <div class="col-xs-12">
         <h1><a href="">Kaminari Rondônia</a></h1>
+      </div>
+      <div class="col-xs-12 .visible-lg-block .hidden">
         <nav class="menu">
           <ul>
 
@@ -15,7 +17,7 @@
   </div>
   <div class="banner">
     <div class="dados">
-      <div class="wrapper visible-xs-block visible-sm-block clearfix">
+      <div class="wrapper clearfix">
         <header>
           <h1>Kaminari <em>2015</em></h1>
           <h2>Datas</h2>
@@ -29,10 +31,10 @@
           Jul
         </time>
       </div>
-      <footer class="visible-xs-block visible-sm-block">
+      <footer>
         <div class="wrapper">
           <time>Das <em>11h</em> às <em>19h</em></time>
-          <h2 class="hidden-md">Horário</h2>
+          <h2 class="hidden-md hidden-lg">Horário</h2>
         </div>
       </footer>
     </div>
@@ -48,8 +50,10 @@
   foreach ( $posts as $post ) : setup_postdata( $post ); 
   ?>
   <article id="<?php echo $post->post_name; ?>">
-    <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
+    <header>
+      <h1><?php the_title(); ?></h1>
+    </header>
+    <div class="content"><?php the_content(); ?></div>
   </article>
   <?php 
   endforeach; 
@@ -64,27 +68,29 @@ $posts = get_posts(array(
   ));
 if(count($posts)):
   ?>
-<div id="convidados" class="clearfix">
-  <h1>Convidados</h1>
-  <?php
-  foreach ( $posts as $post ) : setup_postdata( $post ); 
-  $meta = get_post_meta(get_the_ID());
-  ?>
-  <div class="convidado col-xs-12 col-sm-6">
-    <img src="<?php echo $meta['wpcf-url-imagem'][0]; ?>">
-    <h1><?php the_title(); ?></h1>
-    <p>
-      <?php echo $meta['wpcf-resumo'][0]; ?> 
-    </p>
-  </div>
-  <?php 
-  endforeach; 
-  wp_reset_postdata();
-  ?>
-</div>
+<section id="convidados">
+  <header>
+    <h1>Convidados</h1>
+  </header>
+  <div class="content clearfix">
 <?php
-endif;
+    foreach ( $posts as $post ) : setup_postdata( $post ); 
+    $meta = get_post_meta(get_the_ID());
 ?>
+    <div class="convidado col-xs-12 col-sm-6">
+      <img src="<?php echo $meta['wpcf-url-imagem'][0]; ?>">
+      <h1><?php the_title(); ?></h1>
+      <p>
+        <?php echo $meta['wpcf-resumo'][0]; ?> 
+      </p>
+    </div>
+<?php 
+    endforeach; 
+    wp_reset_postdata();
+?>
+  </div>
+</section>
+<?php endif;?>
 <div id="ingressos">
   <div class="container">
     <div class="row">

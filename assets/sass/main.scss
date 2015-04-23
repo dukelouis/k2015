@@ -235,6 +235,36 @@ body {
     color: #565960;
     margin-bottom: 30px;
 
+    >header {
+      h1 {
+        font-family: 'Kaushan Script';
+        color: #565960;
+        text-align: center;
+        font-size: rem(24);
+        padding-bottom: 20px;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 40px;
+          height: 3px;
+          left: 50%;
+          margin-left: -20px;
+          background-color: #44A025;
+        }
+      }
+    }
+  }
+}
+
+#convidados {
+  padding: 20px;
+  background: url(../images/bg-stripped.png);
+
+  > header {
     > h1 {
       font-family: 'Kaushan Script';
       color: #565960;
@@ -242,6 +272,8 @@ body {
       font-size: rem(24);
       padding-bottom: 20px;
       position: relative;
+      margin-top: 0 !important;
+      margin-bottom: 20px !important;
 
       &:after {
         content: "";
@@ -252,36 +284,8 @@ body {
         height: 3px;
         left: 50%;
         margin-left: -20px;
-        background-color: #44A025;
+        background-color: #D71923;
       }
-    }
-  }
-}
-
-#convidados {
-  padding: 20px;
-  background: url(../images/bg-stripped.png);
-
-  > h1 {
-    font-family: 'Kaushan Script';
-    color: #565960;
-    text-align: center;
-    font-size: rem(24);
-    padding-bottom: 20px;
-    position: relative;
-    margin-top: 0 !important;
-    margin-bottom: 20px !important;
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 40px;
-      height: 3px;
-      left: 50%;
-      margin-left: -20px;
-      background-color: #D71923;
     }
   }
 
@@ -499,15 +503,17 @@ body {
 
     &:after {
       content: "";
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 30px;
-        height: 1px;
-        left: 0;
-        background-color: #51C137;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 30px;
+      height: 1px;
+      left: 0;
+      background-color: #51C137;
     }
   }
 }
 
-@import "_sm-res";
+@import "sm-res";
+@import "md-res";
+@import "lg-res";
